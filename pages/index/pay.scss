@@ -1,0 +1,77 @@
+.wrapper-py {
+  padding: 15px;
+  .header-wrapper-py {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    color: #000000;
+    box-shadow: #d6d6d6 0px 0px 5px;
+    padding: 15px 30px;
+    .header-title-py {
+      display: flex;
+      justify-content: space-between;
+    }
+    .header-text-py {
+      font-size: 32px;
+      font-weight: 400;
+      display: flex;
+      justify-content: space-between;
+    }
+    .weather-advice-py {
+      margin-top: 20px;
+      font-size: 12px;
+    }
+  }
+  
+  .header-wrapper-pay {
+    background-color: #00AA00;
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: #d6d6d6 0px 0px 5px;
+    padding: 15px 30px;
+    .header-title-pay {
+      display: flex;
+      justify-content: space-between;
+    }
+    .header-text-pay {
+      font-size: 32px;
+      font-weight: 400;
+      display: flex;
+      justify-content: space-between;
+    }
+    .weather-advice-pay {
+      margin-top: 20px;
+      font-size: 12px;
+    }
+  }
+  
+  .data-wrapper-py {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    .data-py {
+      background-color: #fff;
+      width: 150px;
+      height: 80px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-around;
+      padding: 0 8px;
+      box-shadow: #d6d6d6 0px 0px 5px;
+      .data-logo-py {
+        height: 36px;
+        width: 36px;
+        margin-top: 15px;
+      }
+      .data-text-py {
+        margin-top: 15px;
+        color: #7f7f7f;
+        .data-title-py {
+          text-align: right;
+        }
+        .data-value-py {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}

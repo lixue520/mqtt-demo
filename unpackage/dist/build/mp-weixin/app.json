@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/news/news",
+    "pages/my/my"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "智能水箱",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/incons/home.png",
+        "selectedIconPath": "static/incons/home-active.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "新的",
+        "iconPath": "static/incons/news.png",
+        "selectedIconPath": "static/incons/news-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/incons/my.png",
+        "selectedIconPath": "static/incons/my-active.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
