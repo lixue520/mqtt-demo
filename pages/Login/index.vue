@@ -31,6 +31,8 @@
  
 <script>
 	//import md5Libs from "uview-ui/libs/function/md5"
+	import {mapState,mapMutations} from 'vuex'
+
 	export default {
 		data(){
 			return{
@@ -41,6 +43,11 @@
 				loginOK:0 //用户第一次登录是0，登录过后变成1，第二次以后自动登录
 			}
 		},
+		computed:{
+			...mapState(['userName','hasLogin'])
+		},
+		
+		
 		// 自动登录的制作
 		async onLoad(){
 			this.userInfo.username = await uni.getStorageSync("username")
@@ -52,6 +59,7 @@
 			}
 		},
 		methods:{
+			...mapMutations(['login','loginOut']),
 			async login(){
 				// if(this.userInfo.username==='')
 				// {

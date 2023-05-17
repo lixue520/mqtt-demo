@@ -35,7 +35,16 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/list/list",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "智能水箱",
@@ -61,6 +70,13 @@
 				"iconPath": "static/images/tongji.png",
 				"selectedIconPath": "static/images/tongji-active.png"
 
+			},
+			{
+				"pagePath": "pages/list/list",
+				"text": "历史",
+				"iconPath": "static/images/time_32.png",
+				"selectedIconPath": "static/images/time.png"
+			
 			},
 			{
 				"pagePath": "pages/my/my",

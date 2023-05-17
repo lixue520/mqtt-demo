@@ -38,6 +38,34 @@
 						</view>
 					</view>
 				</view>
+				<view class="body-wrapper">
+					<view class="body">
+						<view class="data-wrapper">
+				
+							<view class="data">
+								<image class="data-logo" src="/static/images/dcfa1.png" />
+								<view class="data-text">
+									<view class="data-title">出水阀门L</view>
+									<view class="data-value">
+										<switch @change="onChange($event, 'DZF',DZF)" :checked="DZF" color="#3d7ef9" />
+									</view>
+				
+								</view>
+							</view>
+							<view style="margin-left: 10px;"></view>
+							<view class="data">
+								<image class="data-logo" src="/static/images/dcfa.png" />
+								<view class="data-text">
+									<view class="data-title">出水阀门R</view>
+									<view class="data-value">
+										<switch @change="onChange($event, 'DZF1',DZF1)" :checked="DZF1" color="#3d7ef9" />
+									</view>
+								</view>
+							</view>
+				
+						</view>
+					</view>
+				</view>
 
 				<!-- 	<view>Original Jpeg</view>
 				<view>
@@ -83,8 +111,8 @@
 	//const getstream = require("@/utils/api.js")
 
 	const deviceSubTopic = "/mqtt/test"; //  设备订阅topic（小程序发布命令topic）
-	const devicePubTopic = "/mqtt/test"; //  设备发布topic（小程序订阅数据topic）
-	const deviceSubCamera = "smartwater/opencv/end";
+	const devicePubTopic = "smartwater/pub"; //  设备发布topic（小程序订阅数据topic）
+	const deviceSubCamera = "smartwater/sub";
 
 	/********************* 一般不用动这些 ********************/
 
@@ -117,6 +145,36 @@
 						}
 					}
 				);
+			},
+			onChange(event, type, k) {
+				console.log(event.mp.detail);
+				let sw = event.mp.detail.value;
+				k = sw;
+				var that = this;
+				let value = sw ? 1 : 0;
+				let message = '{"target":"' + type + '","value":' + value + '}';
+				that.client.publish(mpPubTopic, message, function(err) {
+					if (!err) {
+						if (sw) {
+							console.log("成功下发命令——打开报警器");
+							console.log(message)
+						} else {
+							console.log("成功下发命令——关闭报警器");
+							console.log(message)
+						}
+						wx.showToast({
+							title: "指令下发成功",
+							icon: "success",
+							mask: true,
+						});
+					} else {
+						wx.showToast({
+							title: "下发异常",
+							icon: "error",
+							mask: false,
+						});
+					}
+				});
 			},
 			startStreaming() {
 				uni.request({
@@ -210,6 +268,7 @@
 				that.Level = dataFromDev.Level;
 				that.status = dataFromDev.status;
 				that.createtime = dataFromDev.createtime;
+				//this.$store.dispatch('set_bottle',Level)
 
 			});
 

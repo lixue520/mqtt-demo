@@ -1,5 +1,10 @@
+
 <template>
+	<view>
+		<button @click="test">获取历史数据</button>
+		
 	<view class="content">
+		
 		<!-- config-echarts.js中的seriesTemplate为option.series模板，可以作为series中的默认配置，:chartData.series中的配置如果有相同的，会覆盖掉 seriesTemplate 中的配置 -->
 		<qiun-title-bar title="柱状图+动态更新数据" />
 		<!--    <view class="charts-box">
@@ -69,6 +74,7 @@
 			<qiun-data-charts type="ring" :opts="{legend:{position:'bottom'}}" :eopts="ringOpts"
 				:chartData="chartsDataPie2" :echartsH5="true" :echartsApp="true" />
 		</view>
+	</view>
 	</view>
 </template>
 
@@ -189,6 +195,10 @@
 			}, 1000);
 		},
 		methods: {
+			test(){
+				console.log("cccccc");
+				
+			},
 			getServerData() {
 
 				//因部分数据格式一样，这里不同图表引用同一数据源的话，需要深拷贝一下构造不同的对象

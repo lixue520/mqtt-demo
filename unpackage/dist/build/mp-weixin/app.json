@@ -1,8 +1,11 @@
 {
   "pages": [
+    "pages/Login/index",
     "pages/index/index",
     "pages/news/news",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/chart/chart",
+    "pages/list/list"
   ],
   "subPackages": [],
   "window": {
@@ -16,14 +19,26 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "static/incons/home.png",
-        "selectedIconPath": "static/incons/home-active.png"
+        "iconPath": "static/images/newHome.png",
+        "selectedIconPath": "static/images/newHome-active.png"
       },
       {
         "pagePath": "pages/news/news",
-        "text": "新的",
-        "iconPath": "static/incons/news.png",
-        "selectedIconPath": "static/incons/news-active.png"
+        "text": "监控",
+        "iconPath": "static/images/jiankong.png",
+        "selectedIconPath": "static/images/jiankong-active.png"
+      },
+      {
+        "pagePath": "pages/chart/chart",
+        "text": "统计",
+        "iconPath": "static/images/tongji.png",
+        "selectedIconPath": "static/images/tongji-active.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "历史",
+        "iconPath": "static/images/time_32.png",
+        "selectedIconPath": "static/images/time.png"
       },
       {
         "pagePath": "pages/my/my",

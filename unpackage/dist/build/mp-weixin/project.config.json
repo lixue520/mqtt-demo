@@ -6,9 +6,9 @@
     },
     "setting": {
         "urlCheck": false,
-        "es6": false,
-        "postcss": false,
-        "minified": false,
+        "es6": true,
+        "postcss": true,
+        "minified": true,
         "newFeature": true,
         "bigPackageSizeSupport": true,
         "babelSetting": {
@@ -16,12 +16,13 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-        "condition": false
+        "condition": true,
+        "enhance": true
     },
     "compileType": "miniprogram",
     "libVersion": "2.30.3",
     "appid": "wx5ce1b29e3c727c5c",
-    "projectname": "mqtt-demo",
+    "projectname": "智能贩卖机",
     "condition": {},
     "editorSetting": {
         "tabIndent": "auto",

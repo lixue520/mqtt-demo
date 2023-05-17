@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "智能水箱",
-  "usingComponents": {}
+  "usingComponents": {
+    "takemo": "/components/takemo"
+  }
 }
